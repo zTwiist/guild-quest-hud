@@ -13,7 +13,8 @@ jobs:
         with:
           gradle-version: 8.10.2
       - run: gradle build
+        working-directory: guild-quest-hud
       - uses: actions/upload-artifact@v4
         with:
           name: guild-quest-hud
-          path: build/libs/*.jar
+          path: guild-quest-hud/build/libs/*.jar
